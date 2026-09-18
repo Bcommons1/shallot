@@ -1,9 +1,10 @@
-import Image from "next/image";
+import type { CSSProperties } from "react";
 import { Header } from "@/components/header";
 import { InquiryForm } from "@/components/inquiry-form";
 import { getMenu, formatPrice, type MenuItem } from "@/lib/menu";
 import { restaurant, externalUrl } from "@/lib/restaurant";
 import { inquiriesEnabled } from "@/lib/supabase";
+import { embeddedImages } from "@/lib/embedded-images";
 
 export const dynamic = "force-dynamic";
 
@@ -190,6 +191,10 @@ export default async function Home() {
   const orderUrl = externalUrl(restaurant.orderUrl);
   const directionsUrl = externalUrl(restaurant.directionsUrl);
   const categories = [...new Set(menuItems.map((item) => item.category))];
+  const imageStyles = {
+    "--selected-hero": `url("${embeddedImages.selectedHero}")`,
+    "--selected-story": `url("${embeddedImages.selectedStory}")`,
+  } as CSSProperties;
 
   return (
     <>
@@ -199,7 +204,7 @@ export default async function Home() {
         </div>
       )}
       <Header />
-      <main id="main" className="site-main">
+      <main id="main" className="site-main" style={imageStyles}>
         <section id="home" className="hero">
           <div className="hero-overlay" />
           <div className="hero-noise" />
@@ -236,13 +241,10 @@ export default async function Home() {
         <section id="story" className="pim-intro">
           <div className="section-shell intro-grid">
             <figure className="pim-photo-card">
-              <Image
-                src="/images/pim-cooking.jpg"
+              <img
+                src={embeddedImages.pimCooking}
                 alt="Pim cooking at the wok in the Shallot kitchen"
-                width={960}
-                height={1280}
-                sizes="(max-width: 800px) 100vw, 38vw"
-                priority
+                loading="eager"
               />
             </figure>
             <div className="intro-copy">
@@ -328,12 +330,10 @@ export default async function Home() {
               </p>
             </div>
             <figure className="portrait-frame">
-              <Image
-                src="/images/pim-portrait.jpg"
+              <img
+                src={embeddedImages.pimPortrait}
                 alt="Pim, chef and heart behind Shallot Thai Kitchen"
-                width={960}
-                height={1280}
-                sizes="(max-width: 800px) 100vw, 38vw"
+                loading="lazy"
               />
               <figcaption>Pim, the heart behind Shallot</figcaption>
             </figure>
@@ -458,3 +458,5 @@ export default async function Home() {
     </>
   );
 }
+
+

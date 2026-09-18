@@ -241,7 +241,7 @@ img {
   min-height: 0;
   overflow: hidden;
   background:
-    url("/images/selected-hero-exact.jpg") top center / cover no-repeat,
+    var(--selected-hero) top center / cover no-repeat,
     #0b0807;
 }
 
@@ -460,7 +460,7 @@ img {
   position: absolute;
   inset: 0 0 auto;
   height: min(207px, 16.17vw);
-  background: url("/images/selected-story-strip.jpg") top center / cover no-repeat;
+  background: var(--selected-story) top center / cover no-repeat;
 }
 
 .intro-grid {
@@ -1007,7 +1007,7 @@ img {
   .hero {
     background:
       linear-gradient(180deg, rgba(8, 6, 7, 0.9) 0%, rgba(17, 9, 14, 0.72) 42%, rgba(10, 8, 8, 0.95) 100%),
-      url("/images/pad-thai-hero.jpg") center 60% / 540px auto no-repeat,
+      var(--selected-hero) center 60% / cover no-repeat,
       linear-gradient(135deg, #140b10 0%, #2c1119 48%, #0a0808 100%);
   }
 
@@ -1090,3 +1090,4 @@ img {
     animation: none !important;
   }
 }
+
