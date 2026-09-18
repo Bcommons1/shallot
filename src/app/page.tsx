@@ -198,11 +198,6 @@ export default async function Home() {
 
   return (
     <>
-      {process.env.PREVIEW_MODE !== "false" && (
-        <div className="preview-banner">
-          Website preview for Shallot Thai Kitchen
-        </div>
-      )}
       <Header />
       <main id="main" className="site-main" style={imageStyles}>
         <section id="home" className="hero">
@@ -458,5 +453,6 @@ export default async function Home() {
     </>
   );
 }
+
 
 
