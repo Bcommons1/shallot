@@ -1,4 +1,3 @@
-// Replace null values with owner-approved business details before launch.
 export const restaurant: {
   name: string; address: string | null; phone: string | null;
   hours: { days: string; time: string }[];
