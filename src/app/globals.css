@@ -173,7 +173,6 @@ img {
   align-items: flex-start;
   gap: 2rem;
   color: var(--cream);
-  opacity: 0;
 }
 
 .wordmark {
@@ -284,7 +283,6 @@ img {
 .hero-copy {
   width: min(610px, 55vw);
   padding-top: 1.2rem;
-  opacity: 0;
 }
 
 .eyebrow {
@@ -440,7 +438,6 @@ img {
   font-weight: 800;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  opacity: 0;
 }
 
 .hero-asides p:first-child {
