@@ -241,14 +241,22 @@ img {
   min-height: 0;
   overflow: hidden;
   background:
-    var(--selected-hero) top center / cover no-repeat,
-    #0b0807;
+    linear-gradient(
+      100deg,
+      rgba(9, 6, 7, 0.93) 0%,
+      rgba(14, 8, 10, 0.84) 32%,
+      rgba(20, 10, 14, 0.42) 58%,
+      rgba(20, 10, 14, 0.22) 80%,
+      rgba(20, 10, 14, 0.52) 100%
+    ),
+    var(--selected-hero) center / cover no-repeat,
+    linear-gradient(135deg, #140b10 0%, #2c1119 48%, #0a0808 100%);
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: transparent;
+  background: radial-gradient(circle at 84% 16%, rgba(217, 155, 119, 0.3), transparent 45%);
   pointer-events: none;
 }
 
@@ -942,11 +950,6 @@ img {
   .hero,
   .hero-inner {
     min-height: 700px;
-  }
-
-  .hero {
-    background-position: 62% 62%;
-    background-size: cover, auto;
   }
 
   .hero-inner {
