@@ -192,18 +192,6 @@ img {
   letter-spacing: 0.005em;
 }
 
-.wordmark span::after {
-  content: "";
-  display: inline-block;
-  width: 0.68em;
-  height: 0.34em;
-  margin-left: 0.06em;
-  background: radial-gradient(circle at 15% 50%, var(--chili) 0 18%, transparent 20%),
-    linear-gradient(72deg, transparent 0 28%, var(--chili) 30% 72%, transparent 74%);
-  border-radius: 80% 15% 80% 15%;
-  transform: rotate(-10deg) translateY(-0.02em);
-}
-
 .wordmark b {
   justify-self: center;
   font-size: 0.72rem;
@@ -387,18 +375,6 @@ img {
   background: rgba(246, 239, 226, 0.35);
 }
 
-.hero-logo span::after {
-  content: "";
-  display: inline-block;
-  width: 0.58em;
-  height: 0.29em;
-  margin-left: 0.02em;
-  background: radial-gradient(circle at 16% 50%, var(--chili) 0 18%, transparent 20%),
-    linear-gradient(72deg, transparent 0 28%, var(--chili) 30% 72%, transparent 74%);
-  border-radius: 80% 15% 80% 15%;
-  transform: rotate(-10deg) translateY(-0.06em);
-}
-
 .hero-logo b {
   justify-self: center;
   color: #fffaf0;
@@ -515,15 +491,7 @@ img {
   background:
     radial-gradient(circle at 95% 10%, rgba(185, 112, 74, 0.16), transparent 22%),
     var(--paper);
-  padding-block: calc(min(207px, 16.17vw) + clamp(3.8rem, 7vw, 7rem)) clamp(3.8rem, 7vw, 7rem);
-}
-
-.pim-intro::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto;
-  height: min(207px, 16.17vw);
-  background: var(--selected-story) top center / cover no-repeat;
+  padding-block: clamp(3.8rem, 7vw, 7rem);
 }
 
 .intro-grid {
@@ -1099,14 +1067,6 @@ img {
 
   .hero-photo {
     object-position: 62% 42%;
-  }
-
-  .pim-intro {
-    padding-block: clamp(3.8rem, 7vw, 7rem);
-  }
-
-  .pim-intro::before {
-    display: none;
   }
 
   .hero-inner {
