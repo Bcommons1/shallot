@@ -184,7 +184,7 @@ img {
 
 .wordmark span {
   font-family: var(--script);
-  font-size: clamp(3.1rem, 5.4vw, 5.4rem);
+  font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 700;
   letter-spacing: 0.005em;
 }
@@ -273,10 +273,10 @@ img {
   height: min(646px, 50.47vw);
   min-height: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 4rem;
-  padding-top: 8rem;
+  padding-top: 9.5rem;
   padding-bottom: 5rem;
 }
 
@@ -323,9 +323,9 @@ img {
 
 .hero-logo span {
   font-family: var(--script);
-  font-size: clamp(7.6rem, 15.2vw, 13.9rem);
+  font-size: clamp(4.4rem, 8.4vw, 8rem);
   font-weight: 700;
-  line-height: 0.73;
+  line-height: 0.85;
   letter-spacing: -0.04em;
   color: #fffaf0;
 }
@@ -427,7 +427,7 @@ img {
 }
 
 .hero-asides {
-  min-height: 510px;
+  min-height: 380px;
   display: grid;
   align-content: space-between;
   justify-items: end;
