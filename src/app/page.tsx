@@ -192,7 +192,6 @@ export default async function Home() {
   const directionsUrl = externalUrl(restaurant.directionsUrl);
   const categories = [...new Set(menuItems.map((item) => item.category))];
   const imageStyles = {
-    "--selected-hero": `url("/images/pad-thai-hero.jpg")`,
     "--selected-story": `url("${embeddedImages.selectedStory}")`,
   } as CSSProperties;
 
@@ -201,6 +200,12 @@ export default async function Home() {
       <Header />
       <main id="main" className="site-main" style={imageStyles}>
         <section id="home" className="hero">
+          <img
+            className="hero-photo"
+            src="/images/pad-thai-hero.jpg"
+            alt=""
+            aria-hidden="true"
+          />
           <div className="hero-overlay" />
           <div className="hero-noise" />
           <div className="hero-inner section-shell">
@@ -211,6 +216,13 @@ export default async function Home() {
               <div className="hero-logo" aria-label="Shallot Thai Kitchen">
                 <span>Shallot</span>
                 <b aria-hidden="true">Thai Kitchen</b>
+                <span className="hero-logo-divider" aria-hidden="true">
+                  <svg width="13" height="13" viewBox="0 0 24 24">
+                    <path d="M12 20c-3.2-2.4-3.6-6.6-3.6-6.6s4 .3 3.6 6.6z" fill="currentColor" opacity=".85" />
+                    <path d="M12 20c3.2-2.4 3.6-6.6 3.6-6.6s-4 .3-3.6 6.6z" fill="currentColor" opacity=".85" />
+                    <path d="M12 20c-.4-4.6.6-8.4.6-8.4s1 3.8.6 8.4z" fill="currentColor" opacity=".85" />
+                  </svg>
+                </span>
               </div>
               <h1>Thai flavors, handmade with Pim&apos;s creative touch.</h1>
               <p>
@@ -362,10 +374,36 @@ export default async function Home() {
                 Come for handmade Thai flavors, a warm welcome, and Pim&apos;s
                 creative touch.
               </p>
+              <div className="actions">
+                {directionsUrl && (
+                  <a
+                    className="button button-red"
+                    href={directionsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Get directions
+                  </a>
+                )}
+                {restaurant.phone && (
+                  <a
+                    className="button button-ghost"
+                    href={`tel:${restaurant.phone.replace(/[^+\d]/g, "")}`}
+                  >
+                    Call {restaurant.phone}
+                  </a>
+                )}
+              </div>
             </div>
             <div className="visit-details">
               <div className="detail-block">
-                <h3>Find Shallot</h3>
+                <h3>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">
+                    <path d="M12 21s7-7.58 7-12a7 7 0 10-14 0c0 4.42 7 12 7 12z" />
+                    <circle cx="12" cy="9" r="2.4" />
+                  </svg>
+                  Find Shallot
+                </h3>
                 <p>{restaurant.address || "Clearwater Beach address to be added"}</p>
                 {directionsUrl ? (
                   <a
@@ -381,7 +419,13 @@ export default async function Home() {
                 )}
               </div>
               <div className="detail-block">
-                <h3>Hours</h3>
+                <h3>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 7v5l3.2 2" />
+                  </svg>
+                  Hours
+                </h3>
                 {restaurant.hours.length ? (
                   <dl className="hours">
                     {restaurant.hours.map((row) => (
@@ -396,7 +440,12 @@ export default async function Home() {
                 )}
               </div>
               <div className="detail-block" id="ordering">
-                <h3>Order</h3>
+                <h3>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">
+                    <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2z" />
+                  </svg>
+                  Order
+                </h3>
                 {orderUrl ? (
                   <a
                     className="button button-red"
@@ -408,9 +457,9 @@ export default async function Home() {
                   </a>
                 ) : (
                   <>
-                    <p>Online ordering link to be added</p>
+                    <p>Call ahead for pickup or to reserve a table.</p>
                     <span className="unavailable">
-                      Uber Eats, DoorDash, or direct ordering can be connected later.
+                      Online ordering coming soon — Uber Eats, DoorDash, or direct ordering.
                     </span>
                   </>
                 )}
