@@ -283,9 +283,8 @@ export default async function Home() {
                 <h2>Menu highlights</h2>
               </div>
               <p>
-                The online menu should feel rich, polished, and easy to scan on
-                a phone. Prices are shown from the current photographed menu and
-                should be confirmed before launch.
+                Handmade Thai dishes made fresh to order, from bold curries to
+                comforting noodles. Ask your server about seasonal specials.
               </p>
             </div>
 
