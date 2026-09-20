@@ -354,10 +354,15 @@ export default async function Home() {
             </div>
             <div className="review-card">
               <p>
-                A simple review button can live here once the Google Business
-                Profile link is ready.
+                Loved your visit? A quick review helps other neighbors find us
+                and lets Pim know how she did.
               </p>
-              <a className="button button-red" href="#visit">
+              <a
+                className="button button-red"
+                href="https://www.google.com/search?q=Shallot+Savory+Thai+Clearwater+FL+reviews"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Leave a Google review
               </a>
             </div>
@@ -481,8 +486,8 @@ export default async function Home() {
             <p className="eyebrow">Contact</p>
             <h2>Questions, catering, or a note for the team.</h2>
             <p>
-              This form can be connected once the restaurant email and Supabase
-              settings are confirmed.
+              Planning a get-together or just want to say hi? Send us a note
+              and the team will get back to you.
             </p>
           </div>
           <InquiryForm enabled={inquiriesEnabled()} />
