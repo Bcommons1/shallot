@@ -192,7 +192,7 @@ export default async function Home() {
   const directionsUrl = externalUrl(restaurant.directionsUrl);
   const categories = [...new Set(menuItems.map((item) => item.category))];
   const imageStyles = {
-    "--selected-hero": `url("${embeddedImages.selectedHero}")`,
+    "--selected-hero": `url("/images/pad-thai-hero.jpg")`,
     "--selected-story": `url("${embeddedImages.selectedStory}")`,
   } as CSSProperties;
 
