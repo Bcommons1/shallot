@@ -213,9 +213,9 @@ export default async function Home() {
               <p className="eyebrow hero-eyebrow">
                 Thai food <span>Good people</span> Clearwater Beach
               </p>
-              <div className="hero-logo" aria-label="Shallot Thai Kitchen">
+              <div className="hero-logo" aria-label="Shallot Savory Thai">
                 <span>Shallot</span>
-                <b aria-hidden="true">Thai Kitchen</b>
+                <b aria-hidden="true">Savory Thai</b>
                 <span className="hero-logo-divider" aria-hidden="true">
                   <svg width="13" height="13" viewBox="0 0 24 24">
                     <path d="M12 20c-3.2-2.4-3.6-6.6-3.6-6.6s4 .3 3.6 6.6z" fill="currentColor" opacity=".85" />
@@ -338,7 +338,7 @@ export default async function Home() {
             <figure className="portrait-frame">
               <img
                 src={embeddedImages.pimPortrait}
-                alt="Pim, chef and heart behind Shallot Thai Kitchen"
+                alt="Pim, chef and heart behind Shallot Savory Thai"
                 loading="lazy"
               />
               <figcaption>Pim, the heart behind Shallot</figcaption>
@@ -496,7 +496,7 @@ export default async function Home() {
       <footer className="site-footer section-shell">
         <a className="wordmark" href="#home">
           <span>Shallot</span>
-          <b>Thai Kitchen</b>
+          <b>Savory Thai</b>
         </a>
         <p>Thai food. Good people. Brighter days.</p>
         <a className="text-link" href="#home">
