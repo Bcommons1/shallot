@@ -249,7 +249,7 @@ export default async function Home() {
           <div className="section-shell intro-grid">
             <figure className="pim-photo-card">
               <img
-                src={embeddedImages.pimCooking}
+                src="/images/pim-cooking.jpg"
                 alt="Pim cooking at the wok in the Shallot kitchen"
                 loading="eager"
               />
