@@ -9,7 +9,7 @@ export function Header() {
     <header className="site-header">
       <a className="wordmark" href="#home" aria-label="Shallot home">
         <span>Shallot</span>
-        <b>Thai Kitchen</b>
+        <b>Savory Thai</b>
       </a>
       <button
         className="nav-toggle"
