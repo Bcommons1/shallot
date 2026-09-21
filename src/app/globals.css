@@ -227,8 +227,7 @@ img {
 
 .hero {
   position: relative;
-  height: min(646px, 50.47vw);
-  min-height: 0;
+  min-height: min(646px, 50.47vw);
   overflow: hidden;
   background: #0a0808;
 }
@@ -274,8 +273,7 @@ img {
 .hero-inner {
   position: relative;
   z-index: 2;
-  height: min(646px, 50.47vw);
-  min-height: 0;
+  min-height: min(646px, 50.47vw);
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
