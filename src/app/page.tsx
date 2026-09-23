@@ -70,12 +70,32 @@ const fallbackMenu: MenuItem[] = [
     dietary_labels: [],
   },
   {
-    id: "moo-sate",
-    name: "Moo Sa-Te",
+    id: "chicken-satay",
+    name: "Chicken Satay",
     description:
-      "Grilled pork satay marinated in coconut milk and curry spice, served with cucumber relish and peanut dipping sauce.",
+      "Grilled chicken satay marinated in coconut milk and curry spice, served with cucumber relish and peanut dipping sauce.",
     category: "Appetizers",
     price: 14,
+    currency: "USD",
+    dietary_labels: [],
+  },
+  {
+    id: "egg-rolls",
+    name: "Egg Rolls",
+    description:
+      "Crispy fried egg rolls filled with vegetables and glass noodles, served with sweet chili sauce.",
+    category: "Appetizers",
+    price: 9,
+    currency: "USD",
+    dietary_labels: [],
+  },
+  {
+    id: "tamarind-wings",
+    name: "Tamarind Wings",
+    description:
+      "Crispy fried chicken wings glazed in a sweet and tangy tamarind sauce.",
+    category: "Appetizers",
+    price: 13,
     currency: "USD",
     dietary_labels: [],
   },
@@ -110,6 +130,16 @@ const fallbackMenu: MenuItem[] = [
     dietary_labels: [],
   },
   {
+    id: "panang-beef",
+    name: "Panang Beef",
+    description:
+      "Tender beef simmered in rich panang curry with coconut milk, kaffir lime leaves, and crushed peanuts.",
+    category: "Soups & Curries",
+    price: 26,
+    currency: "USD",
+    dietary_labels: [],
+  },
+  {
     id: "pad-thai",
     name: "Pad Thai",
     description:
@@ -126,6 +156,26 @@ const fallbackMenu: MenuItem[] = [
       "A signature fried rice with roasted red pork, cranberries, corn, peas, and crispy fried shallots.",
     category: "Noodles & Rice",
     price: 25,
+    currency: "USD",
+    dietary_labels: [],
+  },
+  {
+    id: "fried-rice",
+    name: "Fried Rice",
+    description:
+      "Classic Thai fried rice wok-tossed with egg, onion, and tomato.",
+    category: "Noodles & Rice",
+    price: 21,
+    currency: "USD",
+    dietary_labels: ["Chicken $21", "Beef $23", "Shrimp $24", "Crab $25"],
+  },
+  {
+    id: "pineapple-fried-rice",
+    name: "Pineapple Fried Rice",
+    description:
+      "Fried rice tossed with pineapple, cashews, raisins, and curry powder for a bold, sweet-savory finish.",
+    category: "Noodles & Rice",
+    price: 24,
     currency: "USD",
     dietary_labels: [],
   },
@@ -148,6 +198,26 @@ const fallbackMenu: MenuItem[] = [
     price: 25,
     currency: "USD",
     dietary_labels: [],
+  },
+  {
+    id: "pad-pak-goong",
+    name: "Pad Pak Goong",
+    description:
+      "Stir-fried morning glory with shrimp, garlic, and chili in a savory Thai sauce.",
+    category: "Stir-Fried",
+    price: 24,
+    currency: "USD",
+    dietary_labels: [],
+  },
+  {
+    id: "stir-fried-black-pepper",
+    name: "Stir-Fried Black Pepper",
+    description:
+      "Wok-tossed with garlic, onions, bell peppers, and cracked black pepper sauce.",
+    category: "Stir-Fried",
+    price: 22,
+    currency: "USD",
+    dietary_labels: ["Chicken $22", "Beef $25"],
   },
   {
     id: "crispy-seabass",
@@ -175,7 +245,7 @@ const fallbackMenu: MenuItem[] = [
     description:
       "Fragrant coconut sticky rice served with ripe mango slices and rich coconut sauce.",
     category: "Dessert",
-    price: 15,
+    price: 18,
     currency: "USD",
     dietary_labels: [],
   },
