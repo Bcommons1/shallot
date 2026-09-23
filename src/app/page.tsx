@@ -8,6 +8,13 @@ import { embeddedImages } from "@/lib/embedded-images";
 
 export const dynamic = "force-dynamic";
 
+const dishPhotos: Record<string, string> = {
+  "pad-thai": "/images/pad-thai-dish.jpg",
+  "panang-beef": "/images/panang-beef-dish.jpg",
+  "tom-kha": "/images/tom-kha-gai-dish.jpg",
+  "cashew-chicken": "/images/cashew-chicken-dish.jpg",
+};
+
 const fallbackMenu: MenuItem[] = [
   {
     id: "thai-iced-tea",
@@ -362,21 +369,34 @@ export default async function Home() {
               {categories.map((category) => (
                 <section className="menu-category" key={category}>
                   <h3>{category}</h3>
-                  <div className="menu-items">
+                                    <div className="menu-items">
                     {menuItems
                       .filter((item) => item.category === category)
-                      .map((item) => (
-                        <article className="menu-item" key={item.id}>
-                          <div className="menu-item-title">
-                            <h4>{item.name}</h4>
-                            <span>{formatPrice(item.price, item.currency)}</span>
-                          </div>
-                          <p>{item.description}</p>
-                          {item.dietary_labels.length > 0 && (
-                            <p className="dietary">{item.dietary_labels.join(" / ")}</p>
-                          )}
-                        </article>
-                      ))}
+                      .map((item) => {
+                        const photo = dishPhotos[item.id];
+                        return (
+                          <article
+                            className={photo ? "menu-item has-photo" : "menu-item"}
+                            key={item.id}
+                          >
+                            {photo && (
+                              <div className="menu-item-photo">
+                                <img src={photo} alt={item.name} loading="lazy" />
+                              </div>
+                            )}
+                            <div className="menu-item-body">
+                              <div className="menu-item-title">
+                                <h4>{item.name}</h4>
+                                <span>{formatPrice(item.price, item.currency)}</span>
+                              </div>
+                              <p>{item.description}</p>
+                              {item.dietary_labels.length > 0 && (
+                                <p className="dietary">{item.dietary_labels.join(" / ")}</p>
+                              )}
+                            </div>
+                          </article>
+                        );
+                      })}
                   </div>
                 </section>
               ))}
