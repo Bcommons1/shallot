@@ -13,6 +13,11 @@ const dishPhotos: Record<string, string> = {
   "panang-beef": "/images/panang-beef-dish.jpg",
   "tom-kha": "/images/tom-kha-gai-dish.jpg",
   "cashew-chicken": "/images/cashew-chicken-dish.jpg",
+  "pad-pak-goong": "/images/pad-pak-goong-dish.jpg",
+  "pad-ka-proa": "/images/pad-ka-proa-dish.jpg",
+  "stir-fried-black-pepper": "/images/stir-fried-black-pepper-dish.jpg",
+  "crispy-seabass": "/images/crispy-seabass-dish.jpg",
+  "mango-sticky-rice": "/images/mango-sticky-rice-dish.jpg",
 };
 
 const fallbackMenu: MenuItem[] = [
