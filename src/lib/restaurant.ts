@@ -7,10 +7,8 @@ export const restaurant: {
   address: "53 Baymont St, Clearwater Beach, FL 33767",
   phone: "(727) 281-6604",
   hours: [
-    { days: "Sunday", time: "5:00 – 9:00 PM" },
     { days: "Monday", time: "Closed" },
-    { days: "Tuesday – Thursday", time: "5:00 – 9:00 PM" },
-    { days: "Friday – Saturday", time: "5:00 – 10:00 PM" },
+    { days: "Tuesday – Sunday", time: "5:00 – 9:00 PM" },
   ],
   directionsUrl:
     "https://www.google.com/maps/search/?api=1&query=53+Baymont+St%2C+Clearwater+Beach%2C+FL+33767",
